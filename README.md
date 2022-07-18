@@ -2,7 +2,7 @@
 
 This project was made during my last year at Mines Nancy, in the Computer Science Department. The corresponding course is entitled "Malware Attacks / Defense". The point of the project was to write hard-to-debug program, acting like "echo" at first glance. Thanks to debugging techniques, the other team had to tell whether the program had the same behaviour as "echo", or if there were exceptions. obfuscated.cpp does echo, but its behaviour was well hidden from the other team.
 
-DISCLAIMER : "obfuscated.cpp" was compiled with Visual Studio 10.0 on a special Windows XP VM (run on VMWare Workstation 16 / Win10x64), whose firewall and antivirus were disabled. The IDA and PIN tools are also installed on this plateform. This XP version being quite unique, some address deltas in the function memory space might not work with a different Windows XP VM. 
+DISCLAIMER : "obfuscated.cpp" was compiled on a special Windows XP VM, whose firewall and antivirus were disabled. The IDA and PIN tools are also installed on this plateform. This XP version being quite unique, some address deltas in the function memory space might not work with a different Windows XP VM. 
 
 /!\ THE COMPILED PROGRAM HAS AN AGRESSIVE BEHAVIOUR (random password adding, memory destruction) AND SHOULD BE HANDLED WITH CARE, ON A SEPARATE VM.
 
@@ -22,3 +22,12 @@ All encoding techniques used to obfsucate the code are introduced in the 3.10 Py
 ![explain2](https://user-images.githubusercontent.com/106969232/179617182-dba675e0-6eae-42e7-983a-eaf62f837f3e.JPG)
 
 Three categories of aggressive code were added, and activated if there were an incongruence as regards the checksums, or a detected debugger. The first step consists in simply shutting down the machine. The second step forces a password and restarts the computer. The third and final step destroys the system memory, starting with installed debugger locations.
+
+HOW TO USE :
+- Start a compatible Windows XP Virtual Machine (tested with VMWare Workstation 16 emulator / Win10x64)
+- Transfer "obfsucated.cpp" in the VM system
+- Compile "obfuscated.cpp" (tested with Visual Studio 10.0)
+- Close all potentially active debuggers
+- Test the program with the command line, it should always act as "echo", with a bit of delay because of the obfsucation computional cost
+- Test the program with all the 3 conditions met : the display should not change
+- Try to debug step by step the program : the previously introduced security measures will be activated (tested with WinDBG, IDA, Pin, Visual Studio 10.0)
