@@ -21,4 +21,4 @@ All encoding techniques used to obfsucate the code are introduced in the 3.10 Py
 
 ![explain2](https://user-images.githubusercontent.com/106969232/179617182-dba675e0-6eae-42e7-983a-eaf62f837f3e.JPG)
 
-Three categories of aggressive code were added if there were an incongruence as regards the checksums, or a detected active debugger. The first step consists in simply shutting down the machine. The second step forces a password and restarts the computer. The third and final step destroys the system memory, starting with installed debugger locations.
+Three categories of aggressive code were added, and activated if there were an incongruence as regards the checksums, or a detected debugger. The first step consists in simply shutting down the machine. The second step forces a password and restarts the computer. The third and final step destroys the system memory, starting with installed debugger locations.
