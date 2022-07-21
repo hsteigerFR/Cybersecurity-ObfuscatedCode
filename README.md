@@ -2,7 +2,7 @@
 
 This project was made during my last year at Mines Nancy, in the Computer Science Department. The corresponding course is entitled "Malware Attacks / Defense". The point of the project was to write hard-to-debug program, acting like "echo" at first glance. Thanks to debugging techniques, the other team had to tell whether the program had the same behaviour as "echo", or if there were exceptions. obfuscated.cpp does echo, but its behaviour was well hidden from the other team.
 
-DISCLAIMER : "obfuscated.cpp" was compiled on a special Windows XP VM, whose firewall and antivirus were disabled. The IDA and PIN tools are also installed on this plateform. This XP version being quite unique, some address deltas in the function memory space might not work with a different Windows XP VM. 
+DISCLAIMER : "obfuscated.cpp" was compiled on a special Windows XP VM, whose firewall and antivirus are disabled. The IDA and PIN tools are also installed on this plateform. This XP version being quite unique, some function address deltas (that is to say the difference in bytes between two function addresses) in the libraries memory space might not work with a different Windows XP VM. 
 
 /!\ THE COMPILED PROGRAM HAS AN AGRESSIVE BEHAVIOUR (random password adding, memory destruction) AND SHOULD BE HANDLED WITH CARE, ON A SEPARATE VM.
 
