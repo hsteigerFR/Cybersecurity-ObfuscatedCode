@@ -24,8 +24,9 @@ All encoding techniques used to obfsucate the code are introduced in the 3.10 Py
 Three categories of aggressive code were added, and activated if there were an incongruence as regards the checksums, or a detected debugger. The first step consists in simply shutting down the machine. The second step forces a password and restarts the computer. The third and final step destroys the system memory, starting with installed debugger locations.
 
 HOW TO USE :
+- git pull this repo
 - Start a compatible Windows XP Virtual Machine (tested with VMWare Workstation 16 emulator / Win10x64)
-- Transfer "obfsucated.cpp" in the VM system
+- Transfer the C++ code "obfsucated.cpp" in the VM system
 - Compile "obfuscated.cpp" (tested with Visual Studio 10.0)
 - Close all potentially active debuggers
 - Test the program with the command line, it should always act as "echo", with a bit of delay because of the obfsucation computional cost
