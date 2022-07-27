@@ -1,6 +1,7 @@
 # Cybersecurity - Obfuscated Code
 
-Authors : Hugo Steiger, Benjamin Izart
+Authors : Hugo Steiger, Benjamin Izart  
+Full documentation (in French) : https://drive.google.com/drive/folders/16yg3gpRikzVpGzG4b20JTEvcYGvRzW8q?usp=sharing
 
 This project was made during my last year at Mines Nancy, in the Computer Science Department. The corresponding course is entitled "Malware Attacks / Defense". The point of the project was to write hard-to-debug program, acting like "echo" at first glance. Thanks to debugging techniques, the other team had to tell whether the program had the same behaviour as "echo", or if there were exceptions. obfuscated.cpp does echo, but its behaviour was well hidden from the other team.
 
@@ -34,5 +35,3 @@ HOW TO USE :
 - Test the program with the command line, it should always act as "echo", with a bit of delay because of the obfsucation computional cost
 - Test the program with all the 3 conditions met : the display should not change
 - Try to debug step by step the program : the previously introduced security measures will be activated (tested with WinDBG, IDA, Pin, Visual Studio 10.0)
-
-Full documentation (in French) : https://drive.google.com/drive/folders/16yg3gpRikzVpGzG4b20JTEvcYGvRzW8q?usp=sharing
